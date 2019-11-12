@@ -65,7 +65,7 @@ that `Self` is equatable with a value of type `T`:
 ```rust,ignore
 trait Eq<T> { ... }
 impl Eq<usize> for usize { }
-impl<T: Eq<U>> Eq<Vec<U>> for Vec<T> { }
+impl<T: Eq<U>, U> Eq<Vec<U>> for Vec<T> { }
 ```
 
 That could be mapped as follows:
